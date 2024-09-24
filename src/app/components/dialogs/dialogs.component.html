@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="messages" >
+        <h2 innerHtml="{{ this.message}}" ></h2>
+    </div>
+    <div class="inputs" *ngIf="this.current_message_type == 'artist_input'">
+        <div class="">
+            <input type="text"
+            name="text"  
+            class="text_input" 
+            [(ngModel)]="artist"
+            type="text" 
+            autocomplete="off"
+            (keyup)="this.setArtist()"
+             />
+        </div>
+    </div>
+    <div class="submit">
+        <button class="btn" (click)="this.doSomething()"><i [ngClass]="button_icons.get(this.current_message_type)"></i></button>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 35vw ;
+}
+
+.search_bar{
+    flex: 2;
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content:center; 
+    align-items:center;
+}
+
+.details{
+    flex: 5;
+    display: flex;
+    justify-content:center; 
+    align-items:center;
+}
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  border-bottom: none;
+}
+.volume{
+    margin-top: 5vh;
+    flex: 3;
+}
+
+.controls{
+    display: flex;
+    justify-content:center; 
+    align-items:center;
+}
+:host ::ng-deep .p-datatable {
+  position: absolute;
+  height: 98%;
+  width: 98%;
+  z-index: 2;
+  left: 1%;
+  top: 1%;
+  border-radius: 28px; 
+  display: flex;
+  justify-content:center; 
+}
+
+.search_bar{
+  width: 35vw;
+}
+
+.track_data{
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+  .card {
+    height: 70vh;
+    position: relative;
+    background: rgb(255, 0, 179);
+    background: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0,212,255,1) 100%);
+    transition: 0.3s ease;
+    border-radius: 30px;
+    width: 100%;
+    filter: drop-shadow(0px 0px 10px rgba(209, 38, 197, 0.5));
+  }
+  
+  .card::after {
+    content: '';
+    background-color: #07182E;
+    z-index: 1;
+    position: absolute;
+    transition: 0.3s ease;
+    height: 98%;
+    width: 98%;
+    top: 1%;
+    left: 1%;
+    border-radius: 28px;
+  }
+  
+  .card:hover {
+    filter: drop-shadow(0px 0px 10px rgba(209, 38, 197, 1));
+  }
+
+  .slider {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4c00ff;
+    background-image: linear-gradient(160deg, #4900f5 0%, #80D0C7 100%);
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    cursor: pointer;
+  }
+  

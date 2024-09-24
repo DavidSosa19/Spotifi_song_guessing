@@ -40,3 +40,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#multimedia
+.gif
+.png
+.wav
+
+#sens
+environment*
+.env

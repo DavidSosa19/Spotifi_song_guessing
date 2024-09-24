@@ -1,0 +1,43 @@
+<div class="container" >
+    <div class="search_bar" >
+               <app-search style="width: 35vw;" *ngIf="isGameStarted"
+                (onEnter)="search($event);"
+                (onDebounce)="search($event)">
+               </app-search>
+    </div>
+    <div class="details" *ngIf="suggestions">
+        <div class="card">
+                <p-table *ngIf="suggestions.length>0" styleClass="table_data"selectionMode="single" [(selection)]="selectedRow" (onRowSelect)="onRowSelect()" [scrollable]="true" scrollHeight="100%"
+                [value]="suggestions" [tableStyle]="{'min-width': '31vw','max-width':'31vw','height':'100%'     }">
+                <ng-template pTemplate="body" let-track *ngIf="this.searchType == 'tracks'">
+                    <tr style="background-color: transparent " [pSelectableRow]="track">
+                        <td >
+                            <span style="display: flex">
+                                <img [src]="track?.album?.images[0]?.url" width="50px" height="50px" >
+                                <div class="track_data">
+                                    <span style="width: 100%;" ><b style="color: azure;">{{track.name}}</b></span>
+                                    <span style="width: 100%;"><small style="color:lavender;">{{track.artists[0].name}}</small></span>
+                                </div>
+                            </span>
+                        </td>
+                    </tr>
+                </ng-template>
+                    <ng-template #artistsTable pTemplate="body" let-artist *ngIf="this.searchType == 'artists'">
+                        <tr style="background-color: transparent " [pSelectableRow]="artist">
+                            <td >
+                                <span style="display: flex">
+                                    <img [src]="artist?.images[0]?.url" width="50px" height="50px" >
+                                    <div class="track_data">
+                                        <span style="width: 100%;" ><b style="color: azure;">{{artist.name}}</b></span>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+        </div>
+    </div>
+    <div class="volume">
+        <input #volume *ngIf="musicPlaying" id="myRange" [(ngModel)]="current_volume" class="slider" value="50" max="100" min="0" type="range" (change)="setVolume()" (click)="setVolume()">
+    </div>
+</div>

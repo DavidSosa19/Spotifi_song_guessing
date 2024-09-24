@@ -1,0 +1,42 @@
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pet_canva{
+    
+    width: 65vw;
+    display: flex; 
+    justify-content:center; 
+    align-items:center;
+}
+
+.details{
+    width: 35vw;
+    display: flex; 
+    justify-content:center; 
+    align-items:center;
+    margin-right: 10vw;
+}
+
+.surprise{
+    width: 100vw;
+    height: 100vh;
+}
+
+.surprise img{
+    width: 100vw;
+    height: 100vh;
+}
+
+.tabn{
+    width: 100vw;
+    height: 100vh;
+}
+
+.tabn img{
+    width: 100vw;
+    height: 100vh;
+}

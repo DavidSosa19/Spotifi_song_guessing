@@ -1,0 +1,24 @@
+
+.input {
+    margin-top: 5vh;
+    color: #07182E;
+    width: 35vw;
+    height: 10vh;
+    border-radius: 30px;
+    padding: 10px 25px;
+    color:white;
+    border-color: rgba(209, 38, 197, 1);
+    background-color: #07182E;
+    filter: drop-shadow(0px 0px 10px rgba(209, 38, 197, 0.5));
+    font-size: 3vh;
+  }
+  
+  .input:active {
+    filter: drop-shadow(0px 0px 30px rgba(209, 38, 197, 1));
+    border-color: linear-gradient(137deg, rgb(255, 0, 179) 0%, rgba(0,212,255,1) 100%);
+    color:rgba(209, 38, 197, 1);
+  }
+  
+  .input:hover {
+    filter: drop-shadow(0px 0px 10px rgba(209, 38, 197, 1));
+  }

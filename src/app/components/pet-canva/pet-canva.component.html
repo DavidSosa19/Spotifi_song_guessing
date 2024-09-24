@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="sprite">
+        <img [src]="this.sprite_url" alt="">
+    </div>
+    <app-dialogs
+        [hints]="this.clues"
+        (onArtistSet)="setArtist($event)"
+        (onStateChange)="changeState($event)"
+        [guess]="this.guess_map"
+        [track_name]="this.track_name"
+    ></app-dialogs>
+</div>
